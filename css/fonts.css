@@ -1,0 +1,21 @@
+
+@font-face {
+	font-family: 'Basteleur-Bold'; //for the headers
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/Basteleur-Bold.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'Basteleur';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/BASTELEUR-MOONLIGHT.OTF') format('opentype');
+}
+
+@font-face {
+	font-family: 'Jura';
+	font-weight: normal;
+	font-style: normal;
+	src: url('..fonts/Jura-VariableFont_wght.ttf') format('truetype');
+}
