@@ -13,6 +13,39 @@ Colours used in this code:
 body {
   font-size: 14px;
   font: 'Basteleur';
+  text-align: left;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  letter-spacing: .05rem;
+  color: #FFFCDC;
+  font-weight: normal;
+}
+
+header {
+  font-size: 1.05rem;
+  z-index: 2;
+  display: flex;
+  position: fixed;
+  top: 1rem;
+  width: 95%;
+  /* background-color: #141414; */
+}
+
+nav a {
+  font-family: 'Jura';
+  font-weight: bold;
+  margin: 1.05rem;
+  color: #FFF0C7;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+nav a:hover, nav a:focus {
+  color: #DCAFB9;
+}
+
+nav {
+ text-align: center;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -32,6 +65,7 @@ h1, h2, h3, h4, h5, h6 {
   overflow: hidden;
   z-index: -1;
 }
+
 /* --------------------------- STYLING CSS CODE --------------------------- */
 .button {
   font-family: 'Basteleur-Bold';
@@ -69,25 +103,54 @@ h1, h2, h3, h4, h5, h6 {
   /* max-width: 30vw; */
 }
 
+.book-img {
+  max-width: 50vw;
+}
+
 /* --------------------- CONTAINER SPACING CSS CODE --------------------- */
+.title{
+  flex: 1;
+  flex-wrap: wrap;
+}
+
+.title-text {
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+.title-text:hover {
+  color: #DCAFB9;
+}
+
+.main-nav {
+  /* font-weight: 100; */
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: right;
+  text-align: right;
+  flex-wrap: wrap;
+  flex: 2;
+}
+
 .logotype {
   display: flex;
   /* align-content: center; */
-  margin-top: 30vh;
-  margin-left: auto;
-  margin-right: auto;
-  width: 40%;
+  margin-top: 35vh;
+  justify-content: center;
 }
 
 .starting-buttons-container {
   margin-top: 4rem;
   display: flex;
-  /* background-color: white; */
-  /* align-content: center; */
   justify-content: center;
-  /* justify-content: space-between; */
 }
 
 .newgame-container{
   margin-right: 6rem;
+}
+
+.rulebook {
+  display: flex;
+  justify-content: center;
+  margin-top: 10rem;
 }
