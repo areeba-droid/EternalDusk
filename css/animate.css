@@ -1,0 +1,27 @@
+
+.text-container {
+  display: inline-block;
+}
+
+.text{
+  margin-top: 10rem;
+  font-size: 2rem;
+  /* letter-spacing: 3px; */
+  font: 'Alpinecia', Helvetica;
+  border-right: 5px, solid;
+  width: 90vw;
+  white-space: wrap;
+  overflow: hidden;
+  animation:
+    typing 2s,
+    cursor .4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+  50% {border-color: transparent}
+}
+
+@keyframes typing {
+  from{width:0}
+}

@@ -1,28 +1,34 @@
 /*
 Colours used in this code:
-- Background: #124346
+- Background: #1D1A39
 - Accent Green: #626E60
-- Button One (pink): #DCAFB9
+- Button One (pink): #F39F5A
 - Button One Hover: #AC848D
 - Button Two (green): #C2D4A9
 - Button Two Hover: #71805B
-- Default Text: #FFFCDC
+- Default Text: #F0DDCB
 - Dark Text: #2B2B2B
 */
+html{
+  cursor: url('../images/cursor.png'), default;
+}
 
 body {
   font-size: 14px;
-  font: 'Basteleur';
+  font: 'Vinque';
   text-align: left;
   margin-left: 3rem;
   margin-right: 3rem;
   letter-spacing: .05rem;
-  color: #FFFCDC;
+  color: #F0DDCB;
   font-weight: normal;
+  background-image: url('../images/background.png');
+  background-image:
+  /* height: 100vh; */
 }
 
 header {
-  font-size: 1.05rem;
+  font-size: 1.25rem;
   z-index: 2;
   display: flex;
   position: fixed;
@@ -32,16 +38,18 @@ header {
 }
 
 nav a {
-  font-family: 'Jura';
+  font-family: 'Alpinecia';
   font-weight: bold;
   margin: 1.05rem;
   color: #FFF0C7;
   text-decoration: none;
-  transition: 0.5s;
+  transition: 0.75s;
 }
 
 nav a:hover, nav a:focus {
-  color: #DCAFB9;
+  color: #F39F5A;
+  cursor: url('../images/cursor1.png'), default;
+
 }
 
 nav {
@@ -49,15 +57,16 @@ nav {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Basteleur-Bold';
-  font-weight: normal;
-  color: #FFFCDC;
+  font-family: 'Vinque';
+  font-weight: bold;
+  color: #F0DDCB;
 }
 
-.background {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(rgba(24,89,93,1), rgba(12,45,48,1));
+.background-img{
+  background-image: url(images/background.png);
+  width: 100vw;
+  height: 100vh;
+  /* background: linear-gradient(rgba(24,89,93,1), rgba(12,45,48,1));S */
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -66,37 +75,54 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
 }
 
+.background {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgb(29,26,57), rgb(29,26,57), rgb(29,26,57), rgb(69,25,82), rgb(102,37,73), rgb(174,68,90), rgb(243,159,90));
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+
+footer {
+  font-weight: 100;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  align-items: baseline;
+  text-align: right;
+  flex-wrap: wrap;
+  flex: 2;
+  margin-top: 24rem;
+  margin-bottom: 0;
+}
+
 /* --------------------------- STYLING CSS CODE --------------------------- */
 .button {
-  font-family: 'Basteleur-Bold';
+  font-family: 'Alpinecia';
   font-size: 1.25rem;
   border-style: solid;
-  border-color: #FFFCDC;
+  border-color: #F0DDCB;
   border-width: thin;
   text-align: center;
   border-radius: 1.5rem;
   padding: 0.75rem;
   padding-left: 2rem;
   padding-right: 2rem;
-  color: #FFFCDC;
-  background-color: #DCAFB9;
+  color: #F0DDCB;
+  background-color: #1D1A39;
   text-decoration: none;
-  transition-duration: 0.6s;
+  transition-duration: 1s;
 }
 
 .button:hover, .button:focus {
-  background-color: #AC848D;
+  cursor: url('../images/cursor1.png'), default;
+  background-color: #F39F5A;
   border-style: solid;
-  border-color: #FFFCDC;
+  border-color: #F0DDCB;
   border-width: thin;
-}
-
-#green-button {
-  background-color: #C2D4A9;
-}
-
-#green-button:hover, #green-button:focus {
-  background-color: #71805B;
 }
 /* ------------------------ IMAGE SIZING CSS CODE ------------------------ */
 .logo-img {
@@ -119,7 +145,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .title-text:hover {
-  color: #DCAFB9;
+  color: #F39F5A;
+  cursor: url('../images/cursor1.png'), default;
 }
 
 .main-nav {
@@ -137,6 +164,8 @@ h1, h2, h3, h4, h5, h6 {
   /* align-content: center; */
   margin-top: 35vh;
   justify-content: center;
+  font-size: 6vw;
+  color: #F0DDCB;
 }
 
 .starting-buttons-container {
@@ -153,4 +182,134 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: center;
   margin-top: 10rem;
+}
+
+
+/* ----------------- TRYING INVOLT ARDUNIO TO HTML --------------------- */
+
+/*Rangelider*/
+
+.rangeslider{
+	max-width: 300px;
+	height: 40px;
+	padding:0 10px;
+}
+
+.rangeslider>.label{
+	display: none;
+}
+
+.rangeslider>.slider{
+	height: 40px;
+	padding-top:21px;
+}
+
+.noUi-base{
+	background: rgb(0,186,255);
+	width: 100%;
+	height: 4px;
+	position: relative;
+}
+
+.noUi-handle{
+	background: rgb(0,186,255);
+	width: 20px;
+	height: 20px;
+	border-radius: 20px;
+	position: relative;
+	left: -10px;
+	top: -8px;
+	z-index: 1;
+	cursor:pointer;
+}
+
+.noUi-origin{
+	background: #e5e5e5;
+	position: absolute;
+	right: 0;
+	top: 0;
+	left: 0;
+	bottom: 0;
+}
+
+.tooltip{
+	background: #e5e5e5;
+	color:#363636;
+	min-width: 50px;
+	height: 25px;
+	margin-top: -20px;
+	margin-left:-25px;
+	border-radius: 4px;
+	font-size:14px;
+	line-height: 25px;
+	text-align: center;
+	position: relative;
+	float:left;
+}
+
+.tooltip:after {
+	content: " ";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	border-top-color: #e5e5e5;
+	border-width: 8px;
+	margin-left: -8px;
+}
+
+/*Rangeslider with constant label instead of tooltip */
+
+.rangeslider.label-constant>.tooltip{
+	display: none!important;
+}
+
+.rangeslider.label-constant>.slider{
+	width: 90%;
+	padding-left: 15px;
+	float: right;
+}
+
+.rangeslider.label-constant.rangeslider>.label{
+	width: 10%;
+	font-size: 20px;
+	line-height: 46px;
+	text-align: center;
+	display: block;
+	float: left;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
 }

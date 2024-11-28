@@ -19,3 +19,17 @@
 	font-style: normal;
 	src: url('../fonts/Jura-VariableFont_wght.ttf') format('truetype');
 }
+
+@font-face {
+	font-family: 'Vinque';
+	font-weight: normal;
+	font-style: normal;
+	src: url("../fonts/vinque.otf") format('opentype');
+}
+
+@font-face {
+	font-family: 'Alpinecia';
+	font-weight: normal;
+	font-style: normal;
+	src: url('../fonts/alpinecia.otf') format('opentype');
+}
