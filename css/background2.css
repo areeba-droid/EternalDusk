@@ -1,0 +1,16 @@
+body {
+  /* background: linear-gradient(to bottom, , rgb(29,26,57), rgb(29,26,57), rgb(69,25,82), rgb(102,37,73), rgb(174,68,90), rgb(243,159,90)); */
+  background: rgb(29,26,57);
+  }
+
+
+/* .background {
+  width: 100%;
+  height: 100vh;
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -1;
+} */

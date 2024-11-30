@@ -1,20 +1,22 @@
 
-.text-container {
-  display: inline-block;
-}
-
 .text{
-  margin-top: 10rem;
-  font-size: 2rem;
-  /* letter-spacing: 3px; */
-  font: 'Alpinecia', Helvetica;
-  border-right: 5px, solid;
-  width: 90vw;
-  white-space: wrap;
+  width: 100%;
+  white-space: nowrap;
   overflow: hidden;
   animation:
     typing 2s,
     cursor .4s step-end infinite alternate;
+    animation-iteration-count: 1;
+}
+
+.logotype{
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation:
+    typing 4s,
+    cursor 0.4s steps(16);
+    animation-iteration-count: 1;
 }
 
 /* cursor blinking */
