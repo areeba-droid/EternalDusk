@@ -1,13 +1,14 @@
 
 //image, sound and text array for the introduction page
 const images = [
-  {src:"images/intro/1.1.png", text:"It was a peaceful night when suddenly hoards of Vampire Minions ambushed the village of Greenhollow, viciously attacking villagers and destroying buildings.", sound:"sound1.mp3"},
-  {src:"images/intro/1.2.png", text:"Chaos erupted as villagers were screaming in panic while flames licked the sides of houses, illuminating the darkness.", sound:"sound2.mp3"},
-  {src:"images/intro/1.3.png", text:"Faye – Stay away! I won’t let you hurt anyone!", sound:"sound3.mp3"},
-  {src:"images/intro/1.4.png", text:" Colin – Get back!", sound:"sound4.mp3"},
-  {src:"images/intro/1.5.png", text:"Gobba – It seems that we have company…", sound:"sound5.mp3"},
-  {src:"images/intro/1.6.png", text:"Faye, Colin and Gobba knew that this wasn’t a random attack. It was deliberate from the Vampire Lord, and they were determined to put a stop to him and his minions.", sound:"sound6.mp3"},
-  {src:"images/intro/1.1.png", text:"How will the group fair in their attempt to seek answers and justice?", sound:"sound7.mp3"}
+  {src:"images/village2/3.1.png", text:"Colin – Look! There’s another village! Maybe we can stop there for a bit.", sound:"sound1.mp3"},
+  {src:"images/village2/3.2.png", text:"Text Here.", sound:"sound2.mp3"},
+  {src:"images/village2/3.3.png", text:"Text Here.", sound:"sound3.mp3"},
+  {src:"images/village2/3.4.png", text:"Text Here.", sound:"sound4.mp3"},
+  {src:"images/village2/3.5.png", text:"Text Here.", sound:"sound5.mp3"},
+  {src:"images/village2/3.6.png", text:"Text Here.", sound:"sound6.mp3"},
+  {src:"images/village2/3.7.png", text:"Text Here.", sound:"sound7.mp3"},
+  {src:"images/village2/3.8.png", text:"Text Here.", sound:"sound8.mp3"}
 ];
 
 let currentIndex = 0;
@@ -49,7 +50,7 @@ nextButton.addEventListener("click", () => {
     updateUI();
   } else {
     // Redirect to another page when "Finish" is clicked
-    window.location.href = "game-play.html"; // Change to your target page
+    window.location.href = "village2-play.html"; // Change to your target page
   }
 });
 
