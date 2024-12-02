@@ -228,3 +228,10 @@ footer {
   right: 4rem; /* Distance from the right side of the screen */
   /* padding: 10px 20px; */
 }
+
+.back-narrative {
+  position: fixed; /* Keeps the button fixed to the viewport */
+  bottom: 4rem; /* Distance from the bottom of the screen */
+  left: 4rem; /* Distance from the right side of the screen */
+  /* padding: 10px 20px; */
+}
