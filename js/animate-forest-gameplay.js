@@ -1,21 +1,54 @@
 
+
+let muteState = parseInt(localStorage.getItem('muteState')) || 0; // Load mute state from localStorage
+let globalAudio = new Audio();
+let globalAudio2 = new Audio();
+globalAudio.src = "sounds/forest.mp3";
+globalAudio.loop = true;
+globalAudio2.src = "sounds/travel.mp3";
+globalAudio2.loop = true;
+
 // Get references to the DOM elements
 // const imageElement = document.getElementById("image");
 const textElement = document.getElementById("text");
 const nextButton = document.getElementById("next-button");
+const muteButton = document.getElementById("mute-button");
 // const backButton = document.getElementById("back-button");
 
 function playSound(soundPath) {
-  const audio = new Audio(soundPath); // Create a new audio object
-  audio.play(); // Play the sound
+  if (muteState === 1) {
+    globalAudio.play(); // Play the sound
+    globalAudio2.play();
+  }
 }
 
 function updateUI() {
   // Update the image
   document.body.style.backgroundImage = 'url("images/forest1/2.4.png")';
   // textElement.textContent = images[currentIndex].text; //Update the text
-  // playSound(images[currentIndex].sound); // Play the corresponding sound
+  if (muteState === 1) {
+    audio.src = images[currentIndex].sound;
+    globalAudio.play();
+    globalAudio2.play();
+  }
+  muteButton.textContent = muteState === 1 ? "Mute" : "Unmute";
 }
+
+muteButton.addEventListener("click", () => {
+  if (muteState === 1) {
+    muteState = 0;
+    localStorage.setItem('muteState', muteState); // Save state to localStorage
+    globalAudio.pause();
+    globalAudio2.pause();
+    muteButton.textContent = "Unmute";
+  } else {
+    muteState = 1;
+    localStorage.setItem('muteState', muteState); // Save state to localStorage
+    globalAudio.play();
+    globalAudio2.play();
+    muteButton.textContent = "Mute";
+  }
+});
 
 // Initial UI setup
 updateUI();

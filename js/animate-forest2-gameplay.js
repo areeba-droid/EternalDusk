@@ -1,30 +1,48 @@
 
-//image, sound and text array for the introduction page
-// const images = [
-//   {src:'url("images/intro/1.1.png")', text:"In the Home Village", sound:"sound1.mp3"},
-//   {src:'url("images/forest1/2.1.png")', text:"In the Forest", sound:"sound2.mp3"},
-//   {src:'url("images/village2/3.1.png")', text:"In the Village", sound:"sound3.mp3"},
-//   {src:'url("images/forest2/4.1.png")', text:"In the Dark Forest", sound:"sound4.mp3"},
-//   {src:'url("images/ending/5.1.png")', text:"Ending", sound:"sound5.mp3"},
-// ];
+  let muteState = parseInt(localStorage.getItem('muteState')) || 0; // Load mute state from localStorage
+  let globalAudio = new Audio();
+  globalAudio.src = "sounds/dark-forest.mp3";
+  globalAudio.loop = true;
 
-// Get references to the DOM elements
-// const imageElement = document.getElementById("image");
-const textElement = document.getElementById("text");
-const nextButton = document.getElementById("next-button");
-// const backButton = document.getElementById("back-button");
+  // Get references to the DOM elements
+  // const imageElement = document.getElementById("image");
+  const textElement = document.getElementById("text");
+  const nextButton = document.getElementById("next-button");
+  const muteButton = document.getElementById("mute-button");
+  // const backButton = document.getElementById("back-button");
 
-function playSound(soundPath) {
-  const audio = new Audio(soundPath); // Create a new audio object
-  audio.play(); // Play the sound
-}
+  function playSound(soundPath) {
+    if (muteState === 1) {
+      audio.play(); // Play the sound
+      globalAudio.play();
+    }
+  }
 
-function updateUI() {
-  // Update the image
-  document.body.style.backgroundImage = 'url("images/forest2/4.2.png")';
-  // textElement.textContent = images[currentIndex].text; //Update the text
-  // playSound(images[currentIndex].sound); // Play the corresponding sound
-}
+  function updateUI() {
+    // Update the image
+    document.body.style.backgroundImage = 'url("images/forest2/4.2.png")';
+    // textElement.textContent = images[currentIndex].text; //Update the text
+    if (muteState === 1) {
+      audio.src = images[currentIndex].sound;
+      audio.play();
+      globalAudio.play();
+    }
+    muteButton.textContent = muteState === 1 ? "Mute" : "Unmute";
+  }
 
-// Initial UI setup
-updateUI();
+  muteButton.addEventListener("click", () => {
+    if (muteState === 1) {
+      muteState = 0;
+      localStorage.setItem('muteState', muteState); // Save state to localStorage
+      globalAudio.pause();
+      muteButton.textContent = "Unmute";
+    } else {
+      muteState = 1;
+      localStorage.setItem('muteState', muteState); // Save state to localStorage
+      globalAudio.play();
+      muteButton.textContent = "Mute";
+    }
+  });
+
+  // Initial UI setup
+  updateUI();
