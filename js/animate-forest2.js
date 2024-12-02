@@ -1,10 +1,10 @@
 
 //image, sound and text array for the introduction page
 const images = [
-  {src:"images/forest2/4.1.png", text:"After spending time with the townsfolk, they resume their trek towards the Vampire Lord’s castle.", sound:"sounds/cheering.mp3"},
-  {src:"images/forest2/4.2.png", text:"As they make their way through the dense forest. Shadows stretch long across the path, and the air grows colder with every step.", sound:"sounds/horror.mp3"},
-  {src:"images/forest2/4.3.png", text:"Text Here.", sound:"sounds/horror.mp3"},
-  {src:"images/forest2/4.4.png", text:"Text Here.", sound:"sounds/howl.mp3"}
+  {src:'url("images/forest2/4.1.png")', text:"After spending time with the townsfolk, they resume their trek towards the Vampire Lord’s castle.", sound:"sounds/cheering.mp3"},
+  {src:'url("images/forest2/4.2.png")', text:"As they make their way through the dense forest. Shadows stretch long across the path, and the air grows colder with every step.", sound:"sounds/horror.mp3"},
+  {src:'url("images/forest2/4.3.png")', text:"Text Here.", sound:"sounds/horror.mp3"},
+  {src:'url("images/forest2/4.4.png")', text:"Text Here.", sound:"sounds/howl.mp3"}
 ];
 
 let currentIndex = 0;
@@ -15,7 +15,7 @@ let globalAudio = new Audio();
 globalAudio.loop = true;
 
 // Get references to the DOM elements
-const imageElement = document.getElementById("image");
+// const imageElement = document.getElementById("image");
 const textElement = document.getElementById("text");
 const nextButton = document.getElementById("next-button");
 const backButton = document.getElementById("back-button");
@@ -32,7 +32,7 @@ function playSound(soundPath) {
 
 function updateUI() {
   // Update the image and text
-  imageElement.src = images[currentIndex].src;
+  document.body.style.backgroundImage = images[currentIndex].src;
   textElement.textContent = images[currentIndex].text;
 
   // Play the corresponding sound

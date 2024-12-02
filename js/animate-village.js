@@ -1,14 +1,14 @@
 
 //image, sound and text array for the introduction page
 const images = [
-  {src:"images/village2/3.1.png", text:"Colin – Look! There’s another village! Maybe we can stop there for a bit.", sound:"sounds/quiet.mp3"},
-  {src:"images/village2/3.2.png", text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:"images/village2/3.3.png", text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:"images/village2/3.4.png", text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:"images/village2/3.5.png", text:"Text Here.", sound:"sounds/wind.mp3"},
-  {src:"images/village2/3.6.png", text:"Text Here.", sound:"sounds/wind.mp3"},
-  {src:"images/village2/3.7.png", text:"Text Here.", sound:"sound7.mp3"},
-  {src:"images/village2/3.8.png", text:"Text Here.", sound:"sound8.mp3"}
+  {src:'url("images/village2/3.1.png")', text:"Colin – Look! There’s another village! Maybe we can stop there for a bit.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.2.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.3.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.4.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.5.png")', text:"Text Here.", sound:"sounds/wind.mp3"},
+  {src:'url("images/village2/3.6.png")', text:"Text Here.", sound:"sounds/wind.mp3"},
+  {src:'url("images/village2/3.7.png")', text:"Text Here.", sound:"sound7.mp3"},
+  {src:'url("images/village2/3.8.png")', text:"Text Here.", sound:"sound8.mp3"}
 ];
 
 let currentIndex = 0;
@@ -19,7 +19,7 @@ globalAudio.src = "sounds/village.mp3";
 globalAudio.loop = true;
 
 // Get references to the DOM elements
-const imageElement = document.getElementById("image");
+// const imageElement = document.getElementById("image");
 const textElement = document.getElementById("text");
 const nextButton = document.getElementById("next-button");
 const backButton = document.getElementById("back-button");
@@ -36,7 +36,7 @@ function playSound(soundPath) {
 
 function updateUI() {
   // Update the image and text
-  imageElement.src = images[currentIndex].src;
+  document.body.style.backgroundImage = images[currentIndex].src;
   textElement.textContent = images[currentIndex].text;
 
   // Play the corresponding sound

@@ -1,13 +1,13 @@
 
 // Image, sound, and text array for the introduction page
 const images = [
-  {src: "images/intro/1.1.png", text: "It was a peaceful night when suddenly hoards of Vampire Minions ambushed the village of Greenhollow, viciously attacking villagers and destroying buildings.", sound: "sounds/fire.mp3"},
-  {src: "images/intro/1.2.png", text: "Chaos erupted as villagers were screaming in panic while flames licked the sides of houses, illuminating the darkness.", sound: "sounds/running.mp3"},
-  {src: "images/intro/1.3.png", text: "Faye – Stay away! I won’t let you hurt anyone!", sound: "sounds/spell.mp3"},
-  {src: "images/intro/1.4.png", text: "Colin – Get back!", sound: "sounds/sword.mp3"},
-  {src: "images/intro/1.5.png", text: "Gobba – It seems that we have company…", sound: "sounds/walking.mp3"},
-  {src: "images/intro/1.6.png", text: "Faye, Colin and Gobba knew that this wasn’t a random attack. It was deliberate from the Vampire Lord, and they were determined to put a stop to him and his minions.", sound: "sounds/sound6.mp3"},
-  {src: "images/intro/1.1.png", text: "How will the group fair in their attempt to seek answers and justice?", sound: "sounds/fire.mp3"}
+  {src: 'url("images/intro/1.1.png")', text: "It was a peaceful night when suddenly hoards of Vampire Minions ambushed the village of Greenhollow, viciously attacking villagers and destroying buildings.", sound: "sounds/fire.mp3"},
+  {src: 'url("images/intro/1.2.png")', text: "Chaos erupted as villagers were screaming in panic while flames licked the sides of houses, illuminating the darkness.", sound: "sounds/running.mp3"},
+  {src: 'url("images/intro/1.3.png")', text: "Faye – Stay away! I won’t let you hurt anyone!", sound: "sounds/spell.mp3"},
+  {src: 'url("images/intro/1.4.png")', text: "Colin – Get back!", sound: "sounds/sword.mp3"},
+  {src: 'url("images/intro/1.5.png")', text: "Gobba – It seems that we have company…", sound: "sounds/walking.mp3"},
+  {src: 'url("images/intro/1.6.png")', text: "Faye, Colin and Gobba knew that this wasn’t a random attack. It was deliberate from the Vampire Lord, and they were determined to put a stop to him and his minions.", sound: "sounds/sound6.mp3"},
+  {src: 'url("images/intro/1.1.png")', text: "How will the group fair in their attempt to seek answers and justice?", sound: "sounds/fire.mp3"}
 ];
 
 let currentIndex = 0;
@@ -18,7 +18,7 @@ globalAudio.src = "sounds/vampire.mp3";
 globalAudio.loop = true;
 
 // Get references to the DOM elements
-const imageElement = document.getElementById("image");
+// const imageElement = document.getElementById("image");
 const textElement = document.getElementById("text");
 const nextButton = document.getElementById("next-button");
 const backButton = document.getElementById("back-button");
@@ -35,7 +35,8 @@ function playSound(soundPath) {
 
 function updateUI() {
   // Update the image and text
-  imageElement.src = images[currentIndex].src;
+  document.body.style.backgroundImage = images[currentIndex].src;
+  // imageElement.src = ;
   textElement.textContent = images[currentIndex].text;
 
   // Play the corresponding sound
