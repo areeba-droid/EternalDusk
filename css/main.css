@@ -237,3 +237,34 @@ footer {
   left: 4rem; /* Distance from the right side of the screen */
   /* padding: 10px 20px; */
 }
+
+.ending-buttons-container {
+  display:flex;
+  flex-wrap:wrap;
+  text-align:center;
+  margin:auto;
+  justify-content: center;
+}
+
+.button-box {
+  margin: 1rem;
+}
+
+.ending {
+    display: inline-block;
+    /* align-content: center; */
+    text-align: center;
+    margin-top: 20vh;
+    /* justify-content: center; */
+    font-size: 5vw;
+    color: #F0DDCB;
+}
+
+#setup {
+  font-size: 4rem;
+}
+
+#bad {
+  font-size: 4rem;
+  margin-top: 10vh;
+}
