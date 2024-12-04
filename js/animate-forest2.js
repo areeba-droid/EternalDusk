@@ -3,8 +3,8 @@
 const images = [
   {src:'url("images/forest2/4.1.png")', text:"After spending time with the townsfolk, they resume their trek towards the Vampire Lord’s castle.", sound:"sounds/cheering.mp3"},
   {src:'url("images/forest2/4.2.png")', text:"As they make their way through the dense forest. Shadows stretch long across the path, and the air grows colder with every step.", sound:"sounds/horror.mp3"},
-  {src:'url("images/forest2/4.3.png")', text:"Text Here.", sound:"sounds/horror.mp3"},
-  {src:'url("images/forest2/4.4.png")', text:"Text Here.", sound:"sounds/howl.mp3"}
+  {src:'url("images/forest2/4.3.png")', text:"Faye – I don’t have a very good feeling about this place ….", sound:"sounds/horror.mp3"},
+  {src:'url("images/forest2/4.4.png")', text:"Gobba – Keep your wits about you, you don’t know what lurks in this forest…", sound:"sounds/howl.mp3"}
 ];
 
 let currentIndex = 0;

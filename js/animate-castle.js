@@ -1,9 +1,9 @@
 
 //image, sound and text array for the introduction page
 const images = [
-  {src:'url("images/ending/5.1.png")', text:"Text Here.", sound:"sounds/bats.mp3"},
-  {src:'url("images/ending/5.2.png")', text:"Text Here.", sound:"sounds/owl.mp3"},
-  {src:'url("images/ending/5.3.png")', text:"Text Here.", sound:"sounds/.mp3"}
+  {src:'url("images/ending/5.1.png")', text:"As the great castle of the Vampire Lord loomed ahead, the group’s nerves rose violently, unsure of what lay ahead.", sound:"sounds/bats.mp3"},
+  {src:'url("images/ending/5.2.png")', text:"A Vampire Lord and his minions, and an unlikely group that is determined to put a stop to the looming threat to mankind…", sound:"sounds/owl.mp3"},
+  {src:'url("images/ending/5.3.png")', text:"Both parties have prepared for this fight, what will they do now?", sound:"sounds/.mp3"}
 ];
 
 let currentIndex = 0;

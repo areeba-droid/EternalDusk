@@ -2,13 +2,13 @@
 //image, sound and text array for the introduction page
 const images = [
   {src:'url("images/village2/3.1.png")', text:"Colin – Look! There’s another village! Maybe we can stop there for a bit.", sound:"sounds/quiet.mp3"},
-  {src:'url("images/village2/3.2.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:'url("images/village2/3.3.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:'url("images/village2/3.4.png")', text:"Text Here.", sound:"sounds/quiet.mp3"},
-  {src:'url("images/village2/3.5.png")', text:"Text Here.", sound:"sounds/wind.mp3"},
-  {src:'url("images/village2/3.6.png")', text:"Text Here.", sound:"sounds/wind.mp3"},
-  {src:'url("images/village2/3.7.png")', text:"Text Here.", sound:"sound7.mp3"},
-  {src:'url("images/village2/3.8.png")', text:"Text Here.", sound:"sound8.mp3"}
+  {src:'url("images/village2/3.2.png")', text:"The group approached the welcoming gates of the village Willowspire, relieved to have finally reached a place where they could find supplies and regain their strength for the journey ahead.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.3.png")', text:"Slightly weary, but excited, the trio walked through the gates to explore.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.4.png")', text:"The village, which reminded the group of their home, as they walked slowly though the streets, taking in the scenery.", sound:"sounds/quiet.mp3"},
+  {src:'url("images/village2/3.5.png")', text:"The town bustled around them as children laughed in the streets, merchants were haggling with townsfolk and people quietly went about their day.", sound:"sounds/wind.mp3"},
+  {src:'url("images/village2/3.6.png")', text:"Narrator – Suddenly, their peaceful stroll came to a stop. , Faye – What happened over there? It looks like an entire building got taken down!", sound:"sounds/wind.mp3"},
+  {src:'url("images/village2/3.7.png")', text:"Faye – Excuse me, what’s going on? , Woman – It’s the Vampire Lord! He attacked our village last night! Luckily most of the town remained intact, but we still have some repairs to make…", sound:"sound7.mp3"},
+  {src:'url("images/village2/3.8.png")', text:"Gobba – Ah, familiar territory for us, we can help you out if you’d like!", sound:"sound8.mp3"}
 ];
 
 let currentIndex = 0;
